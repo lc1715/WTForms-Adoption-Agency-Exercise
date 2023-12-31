@@ -1,0 +1,54 @@
+ img { 
+    max-width: 30rem;
+    max-height: 20rem;
+} 
+
+.pet-images {
+    max-width: 15rem;
+    max-height: 20rem;
+    display: block;
+}
+
+.pets {
+    margin-bottom: 30px;
+    color: rgb(73, 158, 243);
+}
+
+.add_pet_atag {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.div_anchor_tag{
+    text-align: center;
+}
+
+.edit_pet_name_input{
+    margin-bottom: 10px;
+}
+
+.edit_pet_notes_input{
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.edit_pet_photos_url_input{
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.edit_pet_div {
+    position: absolute;
+    top: 27rem;
+    left: 7rem;
+}
+
+.edit_pet_btn {
+    margin-top: 10px;
+}
+
+.edit_row{
+    margin-top: 30px;
+}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- This is the pet information for the pet that was clicked on -->
+<div class="container text-center">
+    <div class="row justify-content-md-center">
+        <div class=" col">
+            <img src="{{change_pet.photo_url}}" alt="{{change_pet.pet_name}}">
+
+            <ul class="list-unstyled">
+                <li>Name: {{change_pet.pet_name}}</li>
+                <li>Species: {{change_pet.species}}</li>
+                {% if change_pet.age %}
+                <li>Age: {{change_pet.age}}</li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- To edit the information for the pet above using the edit pet form-->
+<div class="container text-center edit_pet_div">
+    <div class="row">
+        <h1>Edit Pet</h1>
+
+        <form action="/{{change_pet.id}}" method="POST">
+
+            {{ form.hidden_tag() }}
+
+            <div class="col edit_pet_name_input">
+                {{form.pet_name.label()}}
+                {{form.pet_name()}}
+            </div>
+
+            <div class="col edit_pet_photo_url_input">
+                {{form.photo_url.label()}}
+                {{form.photo_url()}}
+            </div>
+
+            <div class="col edit_pet_notes_input">
+                {{form.notes.label()}}
+                {{form.notes()}}
+            </div>
+
+            <div class="col">
+                {{form.available.label()}}
+                {{form.available()}}
+            </div>
+            <button class="btn btn-primary btn-sm edit_pet_btn">Save</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
